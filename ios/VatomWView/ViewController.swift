@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         //        Get the access token & refresh token after the token-exchange and pass it to the VatomWallet
-        let vatomAccessToken = "YOUR_ACCESS_TOKEN"
+        let vatomAccessToken = "eyJh.abc.123"
         
         let vatomConfigFeatures: [String: Any] = [
             "hideNavigation": false,
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             "scanner": ["enabled": false],
             "pageConfig": [
                 "theme": [
-                    "header": ["logo": "https://resources.vatom.com/a8BxS4bNj9/UR_Logo.png"],
+                    "header": ["logo": "https://resources.vatom.com/3UewHF0ge9/vdev.png"],
                     "iconTitle": [:],
                     "icon": [:],
                     "main": [:],
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                         "enabled": true,
                         "icons": [
                             [
-                                "src": "https:sites.vatom.com/a8BxS4bNj9",
+                                "src": "https:sites.vatom.com/3UewHF0ge9",
                                 "title": "Home",
                                 "id": "home",
                             ],
@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         ]
         
         
-        self.vatom = VatomWallet(businessId: "e2fVTm8Kuy", accessToken:vatomAccessToken,view: self.view, config: vatomConfigFeatures)
+        self.vatom = VatomWallet(businessId: "3UewHF0ge9", accessToken:vatomAccessToken,view: self.view, config: vatomConfigFeatures)
         view.addSubview(vatom!)
         
         vatom?.scrollView.delegate = self
